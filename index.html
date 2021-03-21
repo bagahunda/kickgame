@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KICKGAME</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__nav">
+      <div class="header__logo">
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 17"><path d="M21.423 15.927V1.057h3.425v14.87h-3.425zM43.804 15.494c-.447.172-.912.322-1.397.449-.478.127-.989.224-1.518.284-.53.067-1.103.097-1.716.097-1.294 0-2.48-.165-3.565-.486-1.084-.321-2.022-.815-2.806-1.465a6.593 6.593 0 01-1.83-2.445c-.434-.98-.658-2.116-.658-3.424 0-1.308.217-2.444.657-3.424.44-.979 1.046-1.794 1.83-2.444.785-.65 1.723-1.144 2.807-1.466C36.692.85 37.885.685 39.173.685c.613 0 1.18.03 1.716.097.53.067 1.04.157 1.518.284.478.127.944.276 1.397.448.446.172.892.367 1.339.583v3.611c-.35-.224-.72-.448-1.11-.665a10.077 10.077 0 00-1.282-.598 9.457 9.457 0 00-1.543-.434 9.727 9.727 0 00-1.894-.164c-1.078 0-1.971.127-2.685.389-.708.261-1.276.605-1.703 1.039-.428.433-.721.927-.893 1.487a5.865 5.865 0 00-.262 1.735c0 .396.038.785.109 1.173a4.006 4.006 0 001.046 2.041c.274.292.618.539 1.033.748.414.21.893.374 1.448.493.548.12 1.186.18 1.907.18.701 0 1.333-.053 1.894-.157a9.658 9.658 0 001.543-.419 8.351 8.351 0 001.282-.59c.39-.225.76-.449 1.11-.673v3.61c-.44.217-.887.412-1.34.591zM79.985.677c1.243 0 2.398.127 3.47.374a16.94 16.94 0 012.94.956v3.634c-.351-.232-.747-.456-1.187-.673-.44-.217-.918-.404-1.435-.576a12.847 12.847 0 00-1.664-.403 10.699 10.699 0 00-1.863-.15c-.81 0-1.518.067-2.124.202a5.961 5.961 0 00-1.55.553c-.433.232-.784.5-1.058.807a4.01 4.01 0 00-.657.98c-.16.344-.268.703-.332 1.061-.064.36-.095.71-.095 1.047 0 .299.025.62.076.964s.153.696.293 1.04c.147.343.345.68.606.994.262.314.594.598 1.008.845.415.246.919.44 1.499.59.58.15 1.282.224 2.085.224.409 0 .76-.015 1.06-.045.299-.03.573-.067.828-.12.249-.051.485-.111.702-.186.217-.075.446-.15.676-.224v-1.794h-3.84v-3.26h7.265v7.596c-.453.179-.963.343-1.53.493-.562.15-1.142.277-1.748.381-.6.105-1.2.187-1.805.247-.606.06-1.174.09-1.71.09-.829 0-1.626-.068-2.391-.195a10.016 10.016 0 01-2.137-.598 7.795 7.795 0 01-1.811-1.032 6.277 6.277 0 01-1.397-1.495 6.994 6.994 0 01-.893-1.988c-.21-.748-.319-1.585-.319-2.52 0-.92.109-1.756.332-2.511.223-.748.53-1.413.925-1.989a6.414 6.414 0 011.428-1.495 7.964 7.964 0 011.837-1.032c.67-.269 1.384-.47 2.143-.598a14.756 14.756 0 012.373-.194zM100.865 4.736L96.12 15.927H92.3l6.64-14.87h3.819l6.64 14.87h-3.821l-4.713-11.191zM131.364 15.927V5.483l-4.706 10.444h-3.285l-4.707-10.444v10.444h-3.425V1.057h4.656l5.121 11.252 5.122-11.251h4.637v14.869h-3.413zM144.542 12.75v-2.9h8.846V6.68h-12.361v9.247H154V12.75h-9.458zm9.324-8.523v-3.17h-12.839v3.17h12.839zM6.512 8.19l8.54-7.132H10.46L3.444 6.724 0 9.505v6.422h3.444V9.744l7.182 6.183h4.993L6.512 8.19zM3.444 1.058H0v4.037h3.444V1.058zM58.07 8.19l8.54-7.132h-4.592l-7.015 5.666-3.444 2.781v6.422h3.444V9.744l7.181 6.183h4.994L58.07 8.19zM55.003 1.058h-3.444v4.037h3.444V1.058z" fill="#FFE500"/></svg>
+      </div>
+      <nav class="header__links">
+        <a href="" class="back-link js-back">
+          <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 36"><g filter="url(#filter0_d)"><path d="M17.959 10.464a.999.999 0 01-.003 1.325l-3.015 3.274h18.2c.474 0 .859.42.859.937 0 .518-.385.938-.86.938h-18.2l3.016 3.273a.999.999 0 01.003 1.325.81.81 0 01-1.216.003l-4.49-4.875a1 1 0 01-.001-1.328l4.491-4.876a.81.81 0 011.216.004z" fill="#FFE500"/></g><defs><filter id="filter0_d" x="-1" y="-6" width="48" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="2"/><feGaussianBlur stdDeviation="6"/><feColorMatrix values="0 0 0 0 0.811765 0 0 0 0 0.72549 0 0 0 0 0.0352941 0 0 0 1 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/><feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/></filter></defs></svg>
+          Назад
+        </a>
+        <a href="" class="link">Главная</a>
+        <a href="" class="link">Расписание</a>
+        <a href="" class="link">Рейтинг</a>
+        <a href="" class="link">Подписка</a>
+        <div class="lang-selector js-lang">
+          <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 8 8"><path d="M0 4h8L4 8 0 4z" fill="#fff"/></svg>
+          РУС
+          <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 28"><g><path fill="#0039A6" d="M6 11.5h20v5H6z"/><path d="M6 7.5a1 1 0 011-1h18a1 1 0 011 1v4H6v-4z" fill="#fff"/><path d="M6 16.5h20v4a1 1 0 01-1 1H7a1 1 0 01-1-1v-4z" fill="#E62D3B"/></g></svg>
+          <div class="lang-selector__menu">
+            <div class="lang-selector__menu-item lang-selector__menu-item--active">
+              РУС
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 28"><g><path fill="#0039A6" d="M6 11.5h20v5H6z"/><path d="M6 7.5a1 1 0 011-1h18a1 1 0 011 1v4H6v-4z" fill="#fff"/><path d="M6 16.5h20v4a1 1 0 01-1 1H7a1 1 0 01-1-1v-4z" fill="#E62D3B"/></g></svg>
+            </div>
+            <div class="lang-selector__menu-item">
+              ENG
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" viewBox="0 0 32 28"><g ><path fill="url(#pattern0)" d="M6 6.5h20v15H6z"/></g><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0" transform="matrix(.015 0 0 .02 -.25 0)"/></pattern><image id="image0" width="100" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAMAAACd646MAAAApVBMVEUAJH1Vbaj///9WbqnPFCvi5vDbTl/zxMoCJn5UbKjU2ulXb6nk6PHl6fLwtLsBJX7T2enbT2DTKD1ZcKpbcqvW3OrY3uuOnsWPn8bfYXHfYnLhbXzhbnzhb33ib32Qn8aRoMcDJ3/niJTniZTojpnoj5rpkZzpk57SJTrwtr3wt77TJjz319v32Nz88vP98/T99PX99fb+9/j++Pj++fr++vvTJzwm3ws1AAABN0lEQVR42u3Xt27FMAxGYYqW2+3pvffe8/6PlqvBGQQaJ1yCIPCZf+DbBEqqWrs21hrpL6hq/E5VW+nvZH1TH8+vY6qqJUZgAGFCdYkAAwgTS+QzAgMIEgl5vgQGECQSMlJgAGFCF9KMgQGEiTAXIYYRJgQYRphghhEmmAEECAdjI0y4GBNBws0YCBJ+psiRAgk/M8mR6c+JYFRsl/p2c7ibOnvQrgx5n+3ni3KrCEaimI14+kdI/IUGZEAG5I8gwwPpQ1qj4niqXfenO6mD248MyRd7s1edHIXWqOcy76qrmFq9etEyR8p8dXfxBL81IBahyJEwHgHjJebWSdQA4yXs4w4YL2EjwHgJGwHGQQDCDBOIMMMEI8wwwQgzRDDCjBDBCDNCBCPMCBGMMCNEMMKMAMEIMytfZZZd/8K7Cz4AAAAASUVORK5CYII="/></defs></svg>
+            </div>
+          </div>
+        </div>
+        <a href="" class="button button--small">Регистрация</a>
+        <a href="" class="link">Войти</a>
+      </nav>
+      <button type="button" class="menu-button js-toggle-menu">
+        <img
+          width="60"
+            src="./images/menu-button.png" alt="menu-button"
+            srcset="./images/menu-button.png 1x, ./images/menu-button@2x.png 2x"
+          >
+      </button>
+      <button type="button" class="menu-button">
+        <img
+          width="60"
+            src="./images/icon-profile.png" alt="icon-profile"
+            srcset="./images/icon-profile.png 1x, ./images/icon-profile@2x.png 2x"
+          >
+      </button>
+    </div>
+    <div class="header__cta cta">
+      <h1 class="title"">KICKGAME</h1>
+      <span class="subtitle">Твой пропуск в киберспорт, пабгер</span>
+      <div class="cta__features">
+        <div class="cta__feature">
+          <img
+            src="./images/duo.png" alt="duo"
+            srcset="./images/duo.png 1x, ./images/duo@2x.png 2x"
+          >
+          Турниры дуо на 100&euro; каждую неделю
+        </div>
+        <div class="cta__feature">
+          <img
+            src="./images/squad.png" alt="squad"
+            srcset="./images/squad.png 1x, ./images/squad@2x.png 2x"
+          >
+          Турниры для сквадов на 1000&euro; каждый месяц
+        </div>
+        <div class="cta__feature">
+          <img
+            src="./images/customs.png" alt="customs"
+            srcset="./images/customs.png 1x, ./images/customs@2x.png 2x"
+          >
+          Кастомки с призами каждую неделю
+        </div>
+        <div class="cta__feature">
+          <img
+            src="./images/free.png" alt="free"
+            srcset="./images/free.png 1x, ./images/free@2x.png 2x"
+          >
+          14 дней, чтобы попробовать все плюшки бесплатно
+        </div>
+      </div>
+      <div class="cta__action">
+        <a href="" class="button button">регистрация</a>
+        Начни путь к победе сегодня!
+      </div>
+      <div class="cta__scroll">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 512 512"><path d="M256 0C156.595 0 75.726 82.14 75.726 183.099v145.807C75.726 429.865 156.595 512 256 512c99.399 0 180.274-81.886 180.274-182.534V183.099C436.274 82.14 355.399 0 256 0zm146.366 329.466c0 81.954-65.656 148.627-146.366 148.627-80.705 0-146.366-66.927-146.366-149.192V183.099c0-82.265 65.661-149.192 146.366-149.192 80.711 0 146.366 66.927 146.366 149.192v146.367z"/><path d="M256 140.15c-9.364 0-16.954 7.59-16.954 16.954v59.338c0 9.364 7.59 16.954 16.954 16.954s16.954-7.59 16.954-16.954v-59.338c0-9.364-7.59-16.954-16.954-16.954z"/></svg>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="adv">
+      <div class="adv__text">
+        <h3>Турнир по PUBG Mobile на 1000&euro; для команд — регистрация открыта</h3>
+        <p>Количество мест ограничено. Зарегистрируйся на платформе KICKGAME, чтобы подать заявку на участие сегодня :3</p>
+      </div>
+      <div class="adv__action">
+        <a href="" class="button">подать заявку</a>
+        <a href="" class="link link--text">Условия проведения турнира<br />и требования к участникам</a>
+      </div>
+    </div>
+
+    <section class="section">
+      <h2 class="main-title">Играя с нами, ты сможешь</h2>
+      <div class="features">
+        <ul class="features__list">
+          <li class="features__item">
+            <img
+              width="80"
+              src="./images/flash.png" alt="flash"
+              srcset="./images/flash.png 1x, ./images/flash@2x.png 2x"
+            >
+            <h3>Прокачаться</h3>
+            <p>тренироваться с tier 1 - tier 3 командами, анализировать свои результаты по готовым записям игр и совершенствовать навыки</p>
+          </li>
+          <li class="features__item">
+            <img
+              width="80"
+              src="./images/first.png" alt="first"
+              srcset="./images/first.png 1x, ./images/first@2x.png 2x"
+            >
+            <h3>Стать первым</h3>
+            <p>в рейтингах игроков и команд, ежедневно соревнуясь с разными соперниками в практических играх</p>
+          </li>
+          <li class="features__item">
+            <img
+              width="80"
+              src="./images/tournament.png" alt="tournament"
+              srcset="./images/tournament.png 1x, ./images/tournament@2x.png 2x"
+            >
+            <h3>Победить в турнире</h3>
+            <p>или нескольких, и забрать часть призового фонда размером в 1000&euro; или 10000&euro;</p>
+          </li>
+        </ul>
+      </div>
+      <div class="section__action">
+        <a href="" class="button">регистрация</a>
+        <span>14 дней бесплатный пробный период</span>
+      </div>
+      <div class="features-bg"></div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section class="section">
+      <div class="games-bg"></div>
+      <h2 class="main-title">Игры</h2>
+      <div class="games">
+        <table class="games__list">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Тип игры</th>
+              <th>Название</th>
+              <th>Дата проведения</th>
+              <th>
+                Рейтинг
+                <span class="tooltip">
+                  ?
+                  <span class="tooltip__text">
+                    Минимальный рейтинг игрока, необходимый для записи на эту игру
+                  </span>
+                </span>
+              </th>
+              <th>Режим</th>
+              <th>Комментатор</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="practice">
+              <td>
+                <img
+                  width="60"
+                  src="./images/practice.png" alt="practice"
+                  srcset="./images/practice.png 1x, ./images/practice@2x.png 2x"
+                >
+                <span>участие</span>
+              </td>
+              <td>
+                Практическая игра
+              </td>
+              <td><a class="games__link" href="">Modern Hunters</a></td>
+              <td>12.08.21-16.08.21</td>
+              <td>3.00</td>
+              <td>
+                <div class="games-type">
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 17 21"><circle cx="8.5" cy="4.75" r="3.75" stroke="#fff"/><path d="M1 17.25a6.5 6.5 0 016.5-6.5h2a6.5 6.5 0 016.5 6.5v0a3.25 3.25 0 01-3.25 3.25h-8.5A3.25 3.25 0 011 17.25v0z" stroke="#fff"/></svg>
+                  x1
+                </div>
+              </td>
+              <td>Юрий Дудь</td>
+            </tr>
+            <tr class="tournament">
+              <td>
+                <img
+                  width="60"
+                  src="./images/tournament-table.png" alt="tournament-table"
+                  srcset="./images/tournament-table.png 1x, ./images/tournament-table@2x.png 2x"
+                >
+              </td>
+              <td>
+                Турнир
+              </td>
+              <td><a class="games__link" href="">Deadpool</a></td>
+              <td>12.08.21-16.08.21</td>
+              <td>4.00</td>
+              <td>
+                <div class="games-type">
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 17 21"><circle cx="8.5" cy="4.75" r="3.75" stroke="#fff"/><path d="M1 17.25a6.5 6.5 0 016.5-6.5h2a6.5 6.5 0 016.5 6.5v0a3.25 3.25 0 01-3.25 3.25h-8.5A3.25 3.25 0 011 17.25v0z" stroke="#fff"/></svg>
+                  x2
+                </div>
+              </td>
+              <td>Алкусей Дурнев</td>
+            </tr>
+            <tr class="custom">
+              <td>
+                <img
+                  width="60"
+                  src="./images/customs-table.png" alt="customs-table"
+                  srcset="./images/customs-table.png 1x, ./images/customs-table@2x.png 2x"
+                >
+              </td>
+              <td>
+                Косточка
+              </td>
+              <td><a class="games__link" href="">Golden War</a></td>
+              <td>12.08.21-16.08.21</td>
+              <td>4.00</td>
+              <td>
+                <div class="games-type">
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 17 21"><circle cx="8.5" cy="4.75" r="3.75" stroke="#fff"/><path d="M1 17.25a6.5 6.5 0 016.5-6.5h2a6.5 6.5 0 016.5 6.5v0a3.25 3.25 0 01-3.25 3.25h-8.5A3.25 3.25 0 011 17.25v0z" stroke="#fff"/></svg>
+                  x2
+                </div>
+              </td>
+              <td>Иван Ургант</td>
+            </tr>
+            <tr class="practice">
+              <td>
+                <img
+                  width="60"
+                  src="./images/practice.png" alt="practice"
+                  srcset="./images/practice.png 1x, ./images/practice@2x.png 2x"
+                >
+              </td>
+              <td>
+                Практическая игра
+              </td>
+              <td><a class="games__link" href="">Modern Hunters</a></td>
+              <td>12.08.21-16.08.21</td>
+              <td>3.00</td>
+              <td>
+                <div class="games-type">
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 17 21"><circle cx="8.5" cy="4.75" r="3.75" stroke="#fff"/><path d="M1 17.25a6.5 6.5 0 016.5-6.5h2a6.5 6.5 0 016.5 6.5v0a3.25 3.25 0 01-3.25 3.25h-8.5A3.25 3.25 0 011 17.25v0z" stroke="#fff"/></svg>
+                  x1
+                </div>
+              </td>
+              <td>Юрий Дудь</td>
+            </tr>
+            <tr class="tournament">
+              <td>
+                <img
+                  width="60"
+                  src="./images/tournament-table.png" alt="tournament-table"
+                  srcset="./images/tournament-table.png 1x, ./images/tournament-table@2x.png 2x"
+                >
+              </td>
+              <td>
+                Турнир
+              </td>
+              <td><a class="games__link" href="">Deadpool</a></td>
+              <td>12.08.21-16.08.21</td>
+              <td>4.00</td>
+              <td>
+                <div class="games-type">
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 17 21"><circle cx="8.5" cy="4.75" r="3.75" stroke="#fff"/><path d="M1 17.25a6.5 6.5 0 016.5-6.5h2a6.5 6.5 0 016.5 6.5v0a3.25 3.25 0 01-3.25 3.25h-8.5A3.25 3.25 0 011 17.25v0z" stroke="#fff"/></svg>
+                  x2
+                </div>
+              </td>
+              <td>Алкусей Дурнев</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="games__list-mobile">
+          <div class="games__list-mobile-item">
+            <div class="game-img"></div>
+            <div class="game-type game-type--practice">
+              <img
+                  width="60"
+                  src="./images/practice.png" alt="practice"
+                  srcset="./images/practice.png 1x, ./images/practice@2x.png 2x"
+                >
+                Практическая игра
+                <span>участие</span>
+            </div>
+            <div class="game-link">
+              <a class="games__link" href="">Modern Hunters</a>
+            </div>
+            <div class="game-info">
+              <div class="game-info__row">
+                <div class="game-info__item">
+                  <span>Дата проведение</span>
+                  12.08.2021 в 16:00
+                </div>
+                <div class="game-info__item">
+                  <span>Рейтинг</span>
+                  3.0
+                </div>
+              </div>
+              <div class="game-info__row">
+                <div class="game-info__item">
+                  <span>Режим</span>
+                  <div class="game-qty">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 17 21"><circle cx="8.5" cy="4.75" r="3.75" stroke="#fff"/><path d="M1 17.25a6.5 6.5 0 016.5-6.5h2a6.5 6.5 0 016.5 6.5v0a3.25 3.25 0 01-3.25 3.25h-8.5A3.25 3.25 0 011 17.25v0z" stroke="#fff"/></svg>
+                    x1
+                  </div>
+                </div>
+                <div class="game-info__item">
+                  <span>Комментатор</span>
+                  Алексей Дурнев
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="games__list-mobile-item">
+            <div class="game-img"></div>
+            <div class="game-type game-type--tournament">
+              <img
+                  width="60"
+                  src="./images/tournament-table.png" alt="tournament-table"
+                  srcset="./images/tournament-table.png 1x, ./images/tournament-table@2x.png 2x"
+                >
+                Турнир
+            </div>
+            <div class="game-link">
+              <a class="games__link" href="">Deadpool</a>
+            </div>
+            <div class="game-info">
+              <div class="game-info__row">
+                <div class="game-info__item">
+                  <span>Дата проведение</span>
+                  12.08.2021 в 16:00
+                </div>
+                <div class="game-info__item">
+                  <span>Рейтинг</span>
+                  3.0
+                </div>
+              </div>
+              <div class="game-info__row">
+                <div class="game-info__item">
+                  <span>Режим</span>
+                  <div class="game-qty">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 17 21"><circle cx="8.5" cy="4.75" r="3.75" stroke="#fff"/><path d="M1 17.25a6.5 6.5 0 016.5-6.5h2a6.5 6.5 0 016.5 6.5v0a3.25 3.25 0 01-3.25 3.25h-8.5A3.25 3.25 0 011 17.25v0z" stroke="#fff"/></svg>
+                    x2
+                  </div>
+                </div>
+                <div class="game-info__item">
+                  <span>Комментатор</span>
+                  Алексей Дурнев
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="games__list-mobile-item">
+            <div class="game-img"></div>
+            <div class="game-type game-type--custom">
+              <img
+                  width="60"
+                  src="./images/customs-table.png" alt="customs-table"
+                  srcset="./images/customs-table.png 1x, ./images/customs-table@2x.png 2x"
+                >
+                Кастомики
+            </div>
+            <div class="game-link">
+              <a class="games__link" href="">Golden War</a>
+            </div>
+            <div class="game-info">
+              <div class="game-info__row">
+                <div class="game-info__item">
+                  <span>Дата проведение</span>
+                  12.08.2021 в 16:00
+                </div>
+                <div class="game-info__item">
+                  <span>Рейтинг</span>
+                  3.0
+                </div>
+              </div>
+              <div class="game-info__row">
+                <div class="game-info__item">
+                  <span>Режим</span>
+                  <div class="game-qty">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 17 21"><circle cx="8.5" cy="4.75" r="3.75" stroke="#fff"/><path d="M1 17.25a6.5 6.5 0 016.5-6.5h2a6.5 6.5 0 016.5 6.5v0a3.25 3.25 0 01-3.25 3.25h-8.5A3.25 3.25 0 011 17.25v0z" stroke="#fff"/></svg>
+                    x2
+                  </div>
+                </div>
+                <div class="game-info__item">
+                  <span>Комментатор</span>
+                  Алексей Дурнев
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__action">
+        <a href="" class="button">Поиск игры</a>
+        <span>Показать ещё 5</span>
+      </div>
+    </section>
+
+
+    <section class="section about">
+      <h2 class="main-title">О платформе</h2>
+      <div class="separator"></div>
+      <div class="video-container">
+        <div class="player">
+          <video class="player__video" src="./images/video.mp4"></video>
+          <div class="player__controls">
+            <button type="button" class="player__button toggle js-play">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163.861 163.861"><path d="M34.857 3.613C20.084-4.861 8.107 2.081 8.107 19.106v125.637c0 17.042 11.977 23.975 26.75 15.509L144.67 97.275c14.778-8.477 14.778-22.211 0-30.686L34.857 3.613z"/></svg>
+            </button>
+            <div class="player__progress">
+              <div class="player__progress-filled"></div>
+            </div>
+            <button class="player__button js-full">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><g clip-path="url(#clip0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.25 2H6a4 4 0 00-4 4v4.25h2.063V5.062a1 1 0 011-1h5.187V2zm5.5 2.063V2H20a4 4 0 014 4v4.25h-2.063V5.062a1 1 0 00-1-1H15.75zm0 17.875h5.188a1 1 0 001-1V15.75H24V20a4 4 0 01-4 4h-4.25v-2.063zM4.062 15.75v5.188a1 1 0 001 1h5.188V24H6a4 4 0 01-4-4v-4.25h2.063z" fill="#5F5A82"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h26v26H0z"/></clipPath></defs></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section functions">
+      <div class="functions-bg"></div>
+      <h2 class="main-title">Функции</h2>
+      <div class="functions__items">
+        <div class="functions__items-row">
+          <div class="functions__item">
+            <div class="functions__item-text">
+              <h4>Поиск игроков и команд</h4>
+              <p>Возможность найти свою идеальную команду, напарника для дуо или бойца в сквад</p>
+            </div>
+            <img
+              src="./images/search.png" alt="search"
+              srcset="./images/search.png 1x, ./images/search@2x.png 2x"
+            >
+          </div>
+          <div class="functions__item">
+            <img
+              src="./images/checked.png" alt="registration"
+              srcset="./images/checked.png 1x, ./images/checked@2x.png 2x"
+            >
+            <div class="functions__item-text">
+              <h4>Ранняя регистрация на игры</h4>
+              <p>Начать регистрироваться на праки можно за 1-2 дня до их начала, а на турниры — за 15 дней</p>
+            </div>
+          </div>
+        </div>
+        <div class="functions__items-row">
+          <div class="functions__item">
+            <div class="functions__item-text">
+              <h4>Удобное управление командой</h4>
+              <p>Создание команды, выбор игр, управление календарём, напоминания об играх и лёгкая замена игроков</p>
+            </div>
+            <img
+              src="./images/console.png" alt="team"
+              srcset="./images/console.png 1x, ./images/console@2x.png 2x"
+            >
+          </div>
+          <div class="functions__item">
+            <img
+              src="./images/stream.png" alt="stream"
+              srcset="./images/stream.png 1x, ./images/stream@2x.png 2x"
+            >
+            <div class="functions__item-text">
+              <h4>Трансляции и записи игр</h4>
+              <p>Все наши игры проходят со стримами, и остаются в открытом доступе для просмотра после завершения</p>
+            </div>
+          </div>
+        </div>
+        <div class="functions__items-row">
+          <div class="functions__item">
+            <div class="functions__item-text">
+              <h4>Игры для сквадов, дуо и соло</h4>
+              <p>От 15 праков ежедневно, кастомки и мимни-турики каждую неделю, крупные турниры каждый месяц</p>
+            </div>
+            <img
+              src="./images/calendar.png" alt="calendar"
+              srcset="./images/calendar.png 1x, ./images/calendar@2x.png 2x"
+            >
+          </div>
+          <div class="functions__item">
+            <img
+              src="./images/rate.png" alt="rate"
+              srcset="./images/rate.png 1x, ./images/rate@2x.png 2x"
+            >
+            <div class="functions__item-text">
+              <h4>Рейтинги и статистика</h4>
+              <p>Квалификация команд и игроков, которая гарантирует игру с равными соперниками и личная статистика по сыграными играм</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__action">
+        <a href="" class="button">регистрация</a>
+        <span>14 дней бесплатный пробный период</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__info">
+      <svg class="footer__logo" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 17"><path d="M21.423 15.927V1.057h3.425v14.87h-3.425zM43.804 15.494c-.447.172-.912.322-1.397.449-.478.127-.989.224-1.518.284-.53.067-1.103.097-1.716.097-1.294 0-2.48-.165-3.565-.486-1.084-.321-2.022-.815-2.806-1.465a6.593 6.593 0 01-1.83-2.445c-.434-.98-.658-2.116-.658-3.424 0-1.308.217-2.444.657-3.424.44-.979 1.046-1.794 1.83-2.444.785-.65 1.723-1.144 2.807-1.466C36.692.85 37.885.685 39.173.685c.613 0 1.18.03 1.716.097.53.067 1.04.157 1.518.284.478.127.944.276 1.397.448.446.172.892.367 1.339.583v3.611c-.35-.224-.72-.448-1.11-.665a10.077 10.077 0 00-1.282-.598 9.457 9.457 0 00-1.543-.434 9.727 9.727 0 00-1.894-.164c-1.078 0-1.971.127-2.685.389-.708.261-1.276.605-1.703 1.039-.428.433-.721.927-.893 1.487a5.865 5.865 0 00-.262 1.735c0 .396.038.785.109 1.173a4.006 4.006 0 001.046 2.041c.274.292.618.539 1.033.748.414.21.893.374 1.448.493.548.12 1.186.18 1.907.18.701 0 1.333-.053 1.894-.157a9.658 9.658 0 001.543-.419 8.351 8.351 0 001.282-.59c.39-.225.76-.449 1.11-.673v3.61c-.44.217-.887.412-1.34.591zM79.985.677c1.243 0 2.398.127 3.47.374a16.94 16.94 0 012.94.956v3.634c-.351-.232-.747-.456-1.187-.673-.44-.217-.918-.404-1.435-.576a12.847 12.847 0 00-1.664-.403 10.699 10.699 0 00-1.863-.15c-.81 0-1.518.067-2.124.202a5.961 5.961 0 00-1.55.553c-.433.232-.784.5-1.058.807a4.01 4.01 0 00-.657.98c-.16.344-.268.703-.332 1.061-.064.36-.095.71-.095 1.047 0 .299.025.62.076.964s.153.696.293 1.04c.147.343.345.68.606.994.262.314.594.598 1.008.845.415.246.919.44 1.499.59.58.15 1.282.224 2.085.224.409 0 .76-.015 1.06-.045.299-.03.573-.067.828-.12.249-.051.485-.111.702-.186.217-.075.446-.15.676-.224v-1.794h-3.84v-3.26h7.265v7.596c-.453.179-.963.343-1.53.493-.562.15-1.142.277-1.748.381-.6.105-1.2.187-1.805.247-.606.06-1.174.09-1.71.09-.829 0-1.626-.068-2.391-.195a10.016 10.016 0 01-2.137-.598 7.795 7.795 0 01-1.811-1.032 6.277 6.277 0 01-1.397-1.495 6.994 6.994 0 01-.893-1.988c-.21-.748-.319-1.585-.319-2.52 0-.92.109-1.756.332-2.511.223-.748.53-1.413.925-1.989a6.414 6.414 0 011.428-1.495 7.964 7.964 0 011.837-1.032c.67-.269 1.384-.47 2.143-.598a14.756 14.756 0 012.373-.194zM100.865 4.736L96.12 15.927H92.3l6.64-14.87h3.819l6.64 14.87h-3.821l-4.713-11.191zM131.364 15.927V5.483l-4.706 10.444h-3.285l-4.707-10.444v10.444h-3.425V1.057h4.656l5.121 11.252 5.122-11.251h4.637v14.869h-3.413zM144.542 12.75v-2.9h8.846V6.68h-12.361v9.247H154V12.75h-9.458zm9.324-8.523v-3.17h-12.839v3.17h12.839zM6.512 8.19l8.54-7.132H10.46L3.444 6.724 0 9.505v6.422h3.444V9.744l7.182 6.183h4.993L6.512 8.19zM3.444 1.058H0v4.037h3.444V1.058zM58.07 8.19l8.54-7.132h-4.592l-7.015 5.666-3.444 2.781v6.422h3.444V9.744l7.181 6.183h4.994L58.07 8.19zM55.003 1.058h-3.444v4.037h3.444V1.058z" fill="#FFE500"/></svg>
+      <p>Платформа KICKGAME не одобрена, не связана, не поддерживается и не спонсируется PUBG CORPORATION, а также иными владельцами иных игр. Весь контент, названия игр, торговые наименования и/или коммерческий внешний вид, товарные знаки, произведения искусства и связанные изображения являются товарными знаками  и/или материалами, защащёнными авторским правом соответствующих правообладателей.</p>
+      <div class="footer__contacts">
+        <div class="footer__contact-info">
+          <a href="mailto:kickgame.ltd@gmail.com" type="email" class="footer__contacts-link">kickgame.ltd@gmail.com</a>
+          <a href="tel:79692815741" type="tel" class="footer__contacts-link">+7(969) 281-57-41</a>
+        </div>
+        <div class="footers__contacts-text">
+          реквизиты: SOLOVENIA LIMITED TIC 104161108J. Vasili Michailidi, 21, Lemesos, 3026 Limassol, Cyprus
+        </div>
+      </div>
+      <div class="footer__socials">
+        <img
+          src="./images/tiktok.png" alt="tiktok"
+          srcset="./images/tiktok.png 1x, ./images/tiktok@2x.png 2x"
+        >
+        <img
+          src="./images/instagram.png" alt="instagram"
+          srcset="./images/instagram.png 1x, ./images/instagram@2x.png 2x"
+        >
+        <img
+          src="./images/discord.png" alt="discord"
+          srcset="./images/discord.png 1x, ./images/discord@2x.png 2x"
+        >
+        <img
+          src="./images/youtube.png" alt="youtube"
+          srcset="./images/youtube.png 1x, ./images/youtube@2x.png 2x"
+        >
+      </div>
+    </div>
+    <div class="footer__nav">
+      <nav class="footer__nav-item">
+        <a class="footer__link" href="">Расписание</a>
+        <a class="footer__link" href="">Профиль</a>
+        <a class="footer__link" href="">Рейтинг</a>
+        <a class="footer__link" href="">Команда</a>
+        <a class="footer__link" href="">Подписка</a>
+      </nav>
+      <nav class="footer__nav-item">
+        <a class="footer__link" href="">Служба поддержки</a>
+        <a class="footer__link" href="">Правила подписки</a>
+        <a class="footer__link" href="">Регламент проведения турниров</a>
+        <a class="footer__link" href="">Политика возврата средств</a>
+        <a class="footer__link" href="">Политика конфиденциальности</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
