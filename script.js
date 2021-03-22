@@ -1,7 +1,8 @@
 const menu = document.querySelector('.header__links');
 const toggleMenuButton = document.querySelector('.js-toggle-menu');
 const backLink = document.querySelector('.js-back');
-const toggleLangButton = document.querySelector('.js-lang');
+const toggleLangButton = document.querySelector('.js-lang-label');
+const langSelector = document.querySelector('.js-lang');
 
 const player = document.querySelector('.player');
 const video = player.querySelector('.player__video');
@@ -58,8 +59,7 @@ backLink.addEventListener('click', (e) => {
 });
 
 toggleLangButton.addEventListener('click', (e) => {
-  e.stopPropagation();
-  toggleLangButton.classList.toggle('lang-selector--opened');
+  langSelector.classList.toggle('lang-selector--opened');
 });
 
 video.addEventListener('click', togglePlay);
